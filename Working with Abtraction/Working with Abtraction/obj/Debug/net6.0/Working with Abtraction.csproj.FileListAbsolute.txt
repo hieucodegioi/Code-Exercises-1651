@@ -1,0 +1,15 @@
+C:\Users\hieud\source\repos\Working with Abtraction\Working with Abtraction\bin\Debug\net6.0\Working with Abtraction.exe
+C:\Users\hieud\source\repos\Working with Abtraction\Working with Abtraction\bin\Debug\net6.0\Working with Abtraction.deps.json
+C:\Users\hieud\source\repos\Working with Abtraction\Working with Abtraction\bin\Debug\net6.0\Working with Abtraction.runtimeconfig.json
+C:\Users\hieud\source\repos\Working with Abtraction\Working with Abtraction\bin\Debug\net6.0\Working with Abtraction.dll
+C:\Users\hieud\source\repos\Working with Abtraction\Working with Abtraction\bin\Debug\net6.0\Working with Abtraction.pdb
+C:\Users\hieud\source\repos\Working with Abtraction\Working with Abtraction\obj\Debug\net6.0\Working with Abtraction.csproj.AssemblyReference.cache
+C:\Users\hieud\source\repos\Working with Abtraction\Working with Abtraction\obj\Debug\net6.0\Working with Abtraction.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hieud\source\repos\Working with Abtraction\Working with Abtraction\obj\Debug\net6.0\Working with Abtraction.AssemblyInfoInputs.cache
+C:\Users\hieud\source\repos\Working with Abtraction\Working with Abtraction\obj\Debug\net6.0\Working with Abtraction.AssemblyInfo.cs
+C:\Users\hieud\source\repos\Working with Abtraction\Working with Abtraction\obj\Debug\net6.0\Working with Abtraction.csproj.CoreCompileInputs.cache
+C:\Users\hieud\source\repos\Working with Abtraction\Working with Abtraction\obj\Debug\net6.0\Working with Abtraction.dll
+C:\Users\hieud\source\repos\Working with Abtraction\Working with Abtraction\obj\Debug\net6.0\refint\Working with Abtraction.dll
+C:\Users\hieud\source\repos\Working with Abtraction\Working with Abtraction\obj\Debug\net6.0\Working with Abtraction.pdb
+C:\Users\hieud\source\repos\Working with Abtraction\Working with Abtraction\obj\Debug\net6.0\Working with Abtraction.genruntimeconfig.cache
+C:\Users\hieud\source\repos\Working with Abtraction\Working with Abtraction\obj\Debug\net6.0\ref\Working with Abtraction.dll
