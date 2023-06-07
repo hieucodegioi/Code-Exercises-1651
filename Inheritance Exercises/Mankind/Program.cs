@@ -4,7 +4,13 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        try
+
+        Student student = new Student();
+        student.PrintInfo();
+        
+
+
+        /*try
         {
             string studentInfo = Console.ReadLine();
             string workerInfo = Console.ReadLine();
@@ -34,6 +40,6 @@ internal class Program
         catch (ArgumentException ex)
         {
             Console.WriteLine(ex.Message);
-        }
+        }*/
     }
 }

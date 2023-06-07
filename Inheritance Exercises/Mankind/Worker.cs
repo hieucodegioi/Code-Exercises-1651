@@ -12,6 +12,10 @@ namespace Mankind
         private decimal weekSalary;
         private int workHoursPerDay;
 
+        public Worker()
+        {
+        }
+
         public Worker(string firstName, string lastName, decimal weekSalary, int workHoursPerDay) : base(firstName, lastName)
         {
             this.WeekSalary = weekSalary;

@@ -12,6 +12,12 @@ namespace Mankind
         
         private string facultyNumber;
 
+        public Student()
+        {
+            FirstName = "Duong";
+            LastName = "hieu";
+        }
+
         public Student(string facultyNumber,string firstName, string lastName) : base(firstName, lastName)
         {
             this.FacultyNumber = facultyNumber;

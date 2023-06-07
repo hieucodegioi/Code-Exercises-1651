@@ -8,21 +8,26 @@ namespace ASM_1651
 {
     internal class School
     {
-        List<Student> Students = new List<Student>();
-        List<Point> points = new List<Point>();
-        private int schoolID;
-        public int SchoolID
-        {
-            get { return schoolID; }
-            set { schoolID = value; }
-        }
-        public List<Point> Points { get => points; set => points = value; }
-        public School(int schoolID)
-        {
-            SchoolID = schoolID;
-        }
+        public List<Student> Students { get; set; }
+
         public School()
         {
+            Students = new List<Student>();
+        }
+
+        public void AddStudent(Student student)
+        {
+            Students.Add(student);
+        }
+
+        public void RemoveStudent(Student student)
+        {
+            Students.Remove(student);
+        }
+
+        public List<Student> GetAllStudents()
+        {
+            return Students;
         }
     }
 }

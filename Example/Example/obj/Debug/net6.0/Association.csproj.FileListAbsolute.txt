@@ -1,0 +1,15 @@
+C:\Users\hieud\source\repos\Example\Example\bin\Debug\net6.0\Association.exe
+C:\Users\hieud\source\repos\Example\Example\bin\Debug\net6.0\Association.deps.json
+C:\Users\hieud\source\repos\Example\Example\bin\Debug\net6.0\Association.runtimeconfig.json
+C:\Users\hieud\source\repos\Example\Example\bin\Debug\net6.0\Association.dll
+C:\Users\hieud\source\repos\Example\Example\bin\Debug\net6.0\Association.pdb
+C:\Users\hieud\source\repos\Example\Example\obj\Debug\net6.0\Association.csproj.AssemblyReference.cache
+C:\Users\hieud\source\repos\Example\Example\obj\Debug\net6.0\Association.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hieud\source\repos\Example\Example\obj\Debug\net6.0\Association.AssemblyInfoInputs.cache
+C:\Users\hieud\source\repos\Example\Example\obj\Debug\net6.0\Association.AssemblyInfo.cs
+C:\Users\hieud\source\repos\Example\Example\obj\Debug\net6.0\Association.csproj.CoreCompileInputs.cache
+C:\Users\hieud\source\repos\Example\Example\obj\Debug\net6.0\Association.dll
+C:\Users\hieud\source\repos\Example\Example\obj\Debug\net6.0\refint\Association.dll
+C:\Users\hieud\source\repos\Example\Example\obj\Debug\net6.0\Association.pdb
+C:\Users\hieud\source\repos\Example\Example\obj\Debug\net6.0\Association.genruntimeconfig.cache
+C:\Users\hieud\source\repos\Example\Example\obj\Debug\net6.0\ref\Association.dll

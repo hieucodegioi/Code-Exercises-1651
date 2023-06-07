@@ -8,28 +8,32 @@ namespace ASM_1651
 {
     internal class Student : Person
     {
-        List<Point> points = new List<Point>();
-        private int studentID;
-        public int StudentID
-        {
-            get { return studentID; }
-            set
-            {
-                studentID = value;
-            }
-        }
-        public List<Point> Points { get => points; set => points = value; }
+        public List<Point> Points { get; set; }
 
-        
-        public Student(int studentID,string name, string email, string address, string phoneNumber) : this(studentID)
+        public Student(int id, string name, DateTime dateOfBirth) : base()
         {
+            Id = id;
+            Name = name;
+            DateOfBirth = dateOfBirth;
+            Points = new List<Point>();
         }
-        public Student(int studentID)
+
+        public void AddPoint(string subject, double value)
         {
-            StudentID = studentID;
+            Point point = new Point(subject, value);
+            Points.Add(point);
         }
-        public Student()
+
+        public override string ToString()
         {
+            string pointsString = "";
+            foreach (Point point in Points)
+            {
+                pointsString += point.ToString() + ", ";
+            }
+            pointsString = pointsString.TrimEnd(',', ' ');
+
+            return $"ID: {Id}, Name: {Name}, Date of Birth: {DateOfBirth.ToShortDateString()}, Points: {pointsString}";
         }
     }
 }

@@ -8,33 +8,18 @@ namespace ASM_1651
 {
     internal class Point
     {
-        private int pointID;
-        public int PointID
+        public string Subject { get; set; }
+        public double Value { get; set; }
+
+        public Point(string subject, double value)
         {
-            get { return pointID; }
-            set { pointID = value; }
+            Subject = subject;
+            Value = value;
         }
-        private double mathPoint;
-        public double MathPoint
+
+        public override string ToString()
         {
-            get { return mathPoint; }
-            set { mathPoint = value; }
+            return $"{Subject}: {Value}";
         }
-        private double chemistryPoint;
-        public double ChemistryPoint
-        {
-            get { return chemistryPoint; }
-            set { chemistryPoint = value; }
-        }
-        private double physicsPoint;
-        public double PhysicsPoint
-        {
-            get { return physicsPoint; }
-            set
-            {
-                physicsPoint = value;
-            }
-        }
-         
     }
 }

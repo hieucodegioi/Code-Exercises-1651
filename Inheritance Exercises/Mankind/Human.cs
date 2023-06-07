@@ -14,7 +14,7 @@ namespace Mankind
             get { return firstName; }
             set
             {
-                if (string.IsNullOrEmpty(value) || !char.IsUpper(value[0]))
+                /*if (string.IsNullOrEmpty(value) || !char.IsUpper(value[0]))
                 {
                     throw new ArgumentException("Expected upper case letter! Argument: firstName");
                 }
@@ -22,7 +22,7 @@ namespace Mankind
                 if (value.Length < 4)
                 {
                     throw new ArgumentException("Expected length at least 4 symbols! Argument: firstName");
-                }
+                }*/
 
                 firstName = value;
             }
@@ -33,7 +33,7 @@ namespace Mankind
             get { return lastName; }
             set
             {
-                if (string.IsNullOrEmpty(value) || !char.IsUpper(value[0]))
+                /*if (string.IsNullOrEmpty(value) || !char.IsUpper(value[0]))
                 {
                     throw new ArgumentException("Expected upper case letter! Argument: lastName");
                 }
@@ -41,7 +41,7 @@ namespace Mankind
                 if (value.Length < 3)
                 {
                     throw new ArgumentException("Expected length at least 3 symbols! Argument: lastName");
-                }
+                }*/
 
                 lastName = value;
             }
@@ -53,5 +53,12 @@ namespace Mankind
             this.FirstName = firstName;
             this.LastName = lastName;
         }
+        public Human  () { }
+        public void printInfo()
+        {
+            Console.WriteLine($"First Name: {FirstName}");
+            Console.WriteLine($"Last Name: {LastName}");
+        }
+
     }
 }
