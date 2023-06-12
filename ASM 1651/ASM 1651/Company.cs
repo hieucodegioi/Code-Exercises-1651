@@ -9,7 +9,7 @@ namespace ASM_1651
     public class Company : ILogin
     {
         List<Employee> employees = new List<Employee>();
-        List<Point> points = new List<Point>();
+        List<Project> projects = new List<Project>();
 
         private int id;
         public int Id
@@ -17,9 +17,9 @@ namespace ASM_1651
             get { return id; }
             set { id = value; }
         }
-        public List<Point> Points
+        public List<Project> Projects
         {
-            get => points; set => points = value;
+            get => projects; set => projects = value;
         }
 
 
@@ -43,8 +43,7 @@ namespace ASM_1651
         public void AddInformationEmployee()
         {
             Employee newEmployee = new Employee();
-            newEmployee.Id = (int)UICode.EnterStudentID();
-            newEmployee.InputInformation();
+            newEmployee.InputInfor();
             employees.Add(newEmployee);
 
         }
@@ -54,25 +53,26 @@ namespace ASM_1651
             Console.WriteLine("                   Company-List                   ");
             foreach (var employee in employees)
             {
-                Console.WriteLine("Employee: " + employee.Id + " " + "Name: "
-                    + employee.Name + " " + "Email:"
-                    + employee.Email + " " + "Date Of Birth "
-                    + employee.DateOfBirth);
+                Console.WriteLine("Employee "
+                    + employee.Name + " " + "Age"
+                    + employee.Age + " " + "Adress:  "
+                    + employee.Adress + " " + " PhoneNumber"
+                    + employee.PhoneNumber);
             }
 
             Console.ForegroundColor = ConsoleColor.White;
 
         }
-        public void PrintInformationOfProduct()
+        public void PrintInformationOfProject()
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("               Product-List               ");
-            foreach (var product in Points)
+            Console.WriteLine("               Project-List               ");
+            foreach (var project in projects)
             {
-                Console.WriteLine("Product:"+ product.Subject +
-                    " StudentID:" + product.Student.Id +
-                    " Student Name" + product.Student.Name +
-                    " Score" + product.Valuee);
+                Console.WriteLine("Project ID: " + project.ProjectId +
+                    " Employee Name: " + project.Employee.Name +
+                    " Name of Project: " + project.NamePro +
+                    " Details: " + project.Details);
 
             }
 
