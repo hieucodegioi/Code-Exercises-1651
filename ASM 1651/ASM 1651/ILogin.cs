@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace ASM_1651
 {
-    internal class IPerson
+    public interface ILogin
     {
-        int Id { get; set; }
-        string Name { get; set; }
-        DateTime DateOfBirth { get; set; }
+        bool Login(string username, string password);
     }
 }

@@ -6,10 +6,28 @@ using System.Threading.Tasks;
 
 namespace ASM_1651
 {
-    internal class Person : IPerson
+    public abstract class Person 
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public DateTime DateOfBirth { get; set; }
+        private string name;    
+        public string Name { get {return name;} set { name = value; } }
+        private string age;
+        public string Age { get { return age;} set { age = value; } }
+        private string adress;
+        public string Adress { get { return adress;} set { adress = value; } }
+        private int phoneNumber;
+        public int PhoneNumber { get { return phoneNumber;} set { phoneNumber = value; } }
+        public Person()
+        {
+        }
+
+        protected Person(string name, string age, string adress, int phoneNumber)
+        {
+            Name = name;
+            Age = age;
+            Adress = adress;
+            PhoneNumber = phoneNumber;
+        }
+
+        public abstract void InputInfor();
     }
 }

@@ -4,8 +4,8 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        List<Student> students = new List<Student>();
-        List<School> schools = new List<School>();
+        List<Employee> students = new List<Employee>();
+        List<Company> schools = new List<Company>();
 
         // Adding students from user input
         while (true)
@@ -30,13 +30,13 @@ internal class Program
                 continue;
             }
 
-            Student student = new Student(id, details[1], dob);
+            Employee student = new Student(id, details[1], dob);
             students.Add(student);
         }
 
         // Creating school and adding students
-        School school = new School();
-        foreach (Student student in students)
+        Company school = new Company();
+        foreach (Employee student in students)
         {
             school.AddStudent(student);
         }
@@ -44,7 +44,7 @@ internal class Program
 
         // Printing all students
         Console.WriteLine("All Students:");
-        foreach (Student student in school.GetAllStudents())
+        foreach (Employee student in school.GetAllStudents())
         {
             Console.WriteLine(student);
         }
