@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Reflection.Emit;
 using System.Text;
@@ -28,10 +29,11 @@ namespace ASM_1651
         {
 
         }
+
         public bool Login(string usernameToCheck, string passwordToCheck)
         {
-            string usernameCorrect = "Student";
-            string passwordCorrect = "Student";
+            string usernameCorrect = "Employee";
+            string passwordCorrect = "Employee";
             if (usernameToCheck == usernameCorrect && passwordToCheck == passwordCorrect)
             {
                 return true;
@@ -42,23 +44,26 @@ namespace ASM_1651
             }
         }
 
-        public Employee(int id, string name, DateTime dateOfBirth, string email) : this(id)
+        public Employee(int iD, string name, int age, string adress, int phoneNumber ) : this(iD)
         {
-
+            
         }
+
         public override void InputInfor()
         {
-            this.Name = UICode.EnterStudentName();
-            this.Email = UICode.EnterStudentEmail();
-            this.DateOfBirth = UICode.EnterStudentDOB();
+            this.Name = UICode.EnterEmployeeName();
+            this.Age = UICode.EnterEmployeeAge();
+            this.Adress = UICode.EnterEmployeeAdress();
+            this.PhoneNumber = UICode.EnterEmployeePhoneNumber();
+
         }
 
         public override string? ToString()
         {
-            return "Student ID:" + Id +
-                " Name: " + Name + 
-                " DateOfBirth: " + DateOfBirth + 
-                " Email: " + Email;
+            return " Name: " + Name + 
+                " Age: " + Age + 
+                " Adress: " + Adress +
+                " Phone Number: " + PhoneNumber;
         }
 
        

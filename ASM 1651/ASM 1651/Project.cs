@@ -40,7 +40,8 @@ namespace ASM_1651
         {
             return "Project ID: " + ProjectId +
                 "Employee : " + employee.Name +
-                "Name Project: " + NamePro ;
+                "Name Project: " + NamePro +
+                "Details: " + Details;
         }
     }
 }

@@ -1,0 +1,5 @@
+C:\Users\hieud\source\repos\ASM 1651\ASM 1651\obj\Debug\net6.0\ASM 1651.csproj.AssemblyReference.cache
+C:\Users\hieud\source\repos\ASM 1651\ASM 1651\obj\Debug\net6.0\ASM 1651.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hieud\source\repos\ASM 1651\ASM 1651\obj\Debug\net6.0\ASM 1651.AssemblyInfoInputs.cache
+C:\Users\hieud\source\repos\ASM 1651\ASM 1651\obj\Debug\net6.0\ASM 1651.AssemblyInfo.cs
+C:\Users\hieud\source\repos\ASM 1651\ASM 1651\obj\Debug\net6.0\ASM 1651.csproj.CoreCompileInputs.cache

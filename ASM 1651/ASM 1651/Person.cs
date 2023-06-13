@@ -10,8 +10,8 @@ namespace ASM_1651
     {
         private string name;    
         public string Name { get {return name;} set { name = value; } }
-        private string age;
-        public string Age { get { return age;} set { age = value; } }
+        private int age;
+        public int Age { get { return age;} set { age = value; } }
         private string adress;
         public string Adress { get { return adress;} set { adress = value; } }
         private int phoneNumber;
