@@ -31,7 +31,7 @@ namespace ASM_1651
             Details = details;
         }
 
-        internal static void Add(Project points)
+        internal static void Add(Project project)
         {
             throw new NotImplementedException();
         }

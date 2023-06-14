@@ -28,11 +28,11 @@ internal class Program
                             do
                             {
                                 Console.ForegroundColor = ConsoleColor.Cyan;
-                                Console.WriteLine("School-Login-----------");
+                                Console.WriteLine("Company-Login-----------");
                                 Console.ForegroundColor = ConsoleColor.White;
-                                Console.Write("Enter Username of School: ");
-                                string EnterUserName = Console.ReadLine();
-                                Console.Write("Enter Password of School: ");
+                                Console.Write("Enter Username of Company: ");
+                                string EnterUserName = Console.ReadLine();  
+                                Console.Write("Enter Password of Company: ");
                                 string EnterPassword = Console.ReadLine();
                                 if (company.Login(EnterUserName, EnterPassword))
                                 {
@@ -43,8 +43,8 @@ internal class Program
                                     UICode.MenuForCompany();
                                     do
                                     {
-                                        int optionForMenuSchool = int.Parse(Console.ReadLine());
-                                        switch (optionForMenuSchool)
+                                        int optionForMenuCompany = int.Parse(Console.ReadLine());
+                                        switch (optionForMenuCompany)
                                         {
                                             case 1:
 
@@ -62,14 +62,14 @@ internal class Program
                                                     Console.WriteLine("Enter Project ID: ");
                                                     int projectID = int.Parse(Console.ReadLine());
 
-                                                    // Enter student ID
+                                                    // Enter Employee ID
                                                     Employee newEmployee = new Employee();
                                                     newEmployee.ID = UICode.EnterEmployeeID();
 
                                                     while (!company.SearchEmployeeID(newEmployee.ID))
                                                     {
                                                         Console.ForegroundColor = ConsoleColor.Red;
-                                                        Console.WriteLine("Student ID not Exist. Please Enter Student ID again");
+                                                        Console.WriteLine("Employee ID not Exist. Please Enter Employee ID again");
                                                         Console.ForegroundColor = ConsoleColor.White;
                                                         newEmployee.ID = UICode.EnterEmployeeID();
                                                     }
@@ -86,7 +86,7 @@ internal class Program
                                                     Project newPoint = new Project(projectID, employeeObj, namePro, details);
 
 
-                                                    // Add new point to point list in student 
+                                                    // Add new point to point list in employee
                                                     company.Projects.Add(newPoint);
                                                     UICode.AddSuccessful();
                                                     UICode.MenuForCompany();
@@ -239,7 +239,7 @@ internal class Program
                                                 }
                                                 break;
                                             case 9:
-                                                //Search Student
+                                                //Search Employee
                                                 try
                                                 {
                                                     int enterID = UICode.EnterEmployeeID();
@@ -250,8 +250,8 @@ internal class Program
                                                         Console.ForegroundColor = ConsoleColor.White;
                                                         enterID = UICode.EnterProjectID();
                                                     }
-                                                    var studentInListBorrow = company.GetEmployeeByID(enterID);
-                                                    Console.WriteLine(studentInListBorrow.ToString());
+                                                    var employeeInListBorrow = company.GetEmployeeByID(enterID);
+                                                    Console.WriteLine(employeeInListBorrow.ToString());
                                                     Console.ForegroundColor = ConsoleColor.Green;
                                                     UICode.SearchSuccessful();
                                                     Console.ForegroundColor = ConsoleColor.White;
@@ -316,7 +316,7 @@ internal class Program
                             do
                             {
                                 Console.ForegroundColor = ConsoleColor.Cyan;
-                                Console.WriteLine("Student-Login-----------");
+                                Console.WriteLine("Employee-Login-----------");
                                 Console.ForegroundColor = ConsoleColor.White;
                                 Console.Write("Enter Username of Employee: ");
                                 string EnterUserName = Console.ReadLine();
@@ -332,8 +332,8 @@ internal class Program
                                     UICode.MenuForCompany();
                                     do
                                     {
-                                        int optionForMenuStudent = int.Parse(Console.ReadLine());
-                                        switch (optionForMenuStudent)
+                                        int optionForMenuEmployee = int.Parse(Console.ReadLine());
+                                        switch (optionForMenuEmployee)
                                         {
                                             case 1:
                                                 //View Employee

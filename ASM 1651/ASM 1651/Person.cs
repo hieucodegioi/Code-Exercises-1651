@@ -20,7 +20,7 @@ namespace ASM_1651
         {
         }
 
-        protected Person(string name, string age, string adress, int phoneNumber)
+        protected Person(string name, int age, string adress, int phoneNumber)
         {
             Name = name;
             Age = age;

@@ -32,69 +32,120 @@ namespace ASM_1651
             return Console.ReadLine();
         }
 
-        internal static void Title()
+        public static void Title()
         {
-            throw new NotImplementedException();
+            Console.WriteLine();
+            Console.WriteLine(".............Welcom to Employee Management System.............");
+            Console.WriteLine();
         }
 
         internal static void MenuForLogin()
         {
-            throw new NotImplementedException();
+            Console.WriteLine();
+            Console.WriteLine("1. Login as a Company");
+            Console.WriteLine("2. Login as a Employee");
+            Console.WriteLine("3. Exit");
+            Console.WriteLine();
         }
 
         internal static void MenuForCompany()
         {
-            throw new NotImplementedException();
+            Console.WriteLine();
+            Console.WriteLine("1. Add Employee");
+            Console.WriteLine("2. Add Project");
+            Console.WriteLine("3. View Employee");
+            Console.WriteLine("4. View Project");
+            Console.WriteLine("5. UpdateEmployeebyID");
+            Console.WriteLine("6. UpdateProjectbyID");
+            Console.WriteLine("7. DeleteEmployeeID");
+            Console.WriteLine("8. DeleteProjectID");
+            Console.WriteLine("9. SearchEmployeeByID");
+            Console.WriteLine("10. SearchProjectByID");
+            Console.WriteLine("11. Logout");
+            Console.WriteLine();
+            Console.WriteLine("Please choose your option");
         }
 
         internal static void AddSuccessful()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Add Successful...");
         }
 
         internal static int EnterEmployeeID()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Enter ID of Employee");
+            return int.Parse(Console.ReadLine());
         }
 
         internal static void UpdateFail()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Update Fail");
         }
 
         internal static void UpdateSuccessful()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Update Successful...");
         }
 
         internal static void MenuForEmployee()
         {
-            throw new NotImplementedException();
+            Console.WriteLine();
+            Console.WriteLine("1. View Employee");
+            Console.WriteLine("2. View Project");
+            Console.WriteLine("3. Search Employee");
+            Console.WriteLine("4. Search Project");
+            Console.WriteLine("5. Logout");
+            Console.WriteLine();
+            Console.WriteLine("Please choose your option");
         }
 
-        internal static void EnterProjectID()
+        internal static int EnterProjectID()
         {
-            throw new NotImplementedException();
+            Console.Write("* Enter Project ID: ");
+            return int.Parse(Console.ReadLine());
         }
 
         internal static string EnterNameProject()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Enter Name of Project");
+            return Console.ReadLine();
         }
 
         internal static string EnterDetailProject()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Enter details of Project");
+            return Console.ReadLine();
         }
 
         internal static void DeleteFail()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Delete fail...");
+            Console.WriteLine("Pls Try again...");
         }
 
         internal static void DeleteSuccessful()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Delete Successful...");
         }
+
+        internal static void SearchFail()
+        {
+            Console.WriteLine("Search Fail...\n Please try again...");
+        }
+
+        internal static void SearchSuccessful()
+        {
+            Console.WriteLine("Search Successful");
+        }
+        public static void IdAlreadyExist()
+        {
+            Console.WriteLine("Id Already Exist. Please Enter Another ID !!!");
+        }
+        public static string TypeExitToFinish()
+        {
+            Console.WriteLine("Type Exit to Finish Option!!!");
+            return Console.ReadLine();
+        }
+
     }
 }
