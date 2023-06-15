@@ -51,10 +51,10 @@ namespace ASM_1651
 
         public override void InputInfor()
         {
-            this.Name = UICode.EnterEmployeeName();
-            this.Age = UICode.EnterEmployeeAge();
-            this.Adress = UICode.EnterEmployeeAdress();
-            this.PhoneNumber = UICode.EnterEmployeePhoneNumber();
+            this.Name = EmployeeManager.EnterEmployeeName();
+            this.Age = EmployeeManager.EnterEmployeeAge();
+            this.Adress = EmployeeManager.EnterEmployeeAdress();
+            this.PhoneNumber = EmployeeManager.EnterEmployeePhoneNumber();
 
         }
 

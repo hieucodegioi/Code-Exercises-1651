@@ -316,7 +316,7 @@ internal class Program
                             do
                             {
                                 Console.ForegroundColor = ConsoleColor.Cyan;
-                                Console.WriteLine("Employee-Login-----------");
+                                Console.WriteLine("Employee-Login...");
                                 Console.ForegroundColor = ConsoleColor.White;
                                 Console.Write("Enter Username of Employee: ");
                                 string EnterUserName = Console.ReadLine();
