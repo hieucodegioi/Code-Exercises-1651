@@ -42,9 +42,14 @@ namespace ASM_1651
                 return false;
             }
         }
+        public void AddProject(Project projects)
+        {
+            Projects.Add(projects);
+        }
         public void AddInformationEmployee()
         {
             Employee newEmployee = new Employee();
+            newEmployee.ID = EmployeeManager.EnterEmployeeID();
             newEmployee.InputInfor();
             employees.Add(newEmployee);
 
@@ -55,7 +60,8 @@ namespace ASM_1651
             Console.WriteLine("                   Company-List                   ");
             foreach (var employee in employees)
             {
-                Console.WriteLine("Employee "
+                Console.WriteLine("Employee: "
+                    + employee.ID
                     + employee.Name + " " + "Age"
                     + employee.Age + " " + "Adress:  "
                     + employee.Adress + " " + " PhoneNumber"

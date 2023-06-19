@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 
 namespace ASM_1651
 {
-    internal class UICode
+    internal class EmployeeManager
     {
+        internal static int EnterEmployeeID()
+        {
+            Console.WriteLine("Enter ID of Employee");
+            return int.Parse(Console.ReadLine());
+        }
+
         public static int EnterEmployeePhoneNumber()
         {
             Console.WriteLine("Enter phonenumber of Employee");
@@ -36,14 +42,15 @@ namespace ASM_1651
         {
             Console.WriteLine();
             Console.WriteLine(".............Welcom to Employee Management System.............");
+            Console.WriteLine("This is a program for employee management, thank you for using the application");
             Console.WriteLine();
         }
 
         internal static void MenuForLogin()
         {
             Console.WriteLine();
-            Console.WriteLine("1. Login as a Company");
-            Console.WriteLine("2. Login as a Employee");
+            Console.WriteLine("1. You are logged in as a company");
+            Console.WriteLine("2. You are logged in as a employee");
             Console.WriteLine("3. Exit");
             Console.WriteLine();
         }
@@ -71,12 +78,7 @@ namespace ASM_1651
             Console.WriteLine("Add Successful...");
         }
 
-        internal static int EnterEmployeeID()
-        {
-            Console.WriteLine("Enter ID of Employee");
-            return int.Parse(Console.ReadLine());
-        }
-
+      
         internal static void UpdateFail()
         {
             Console.WriteLine("Update Fail");

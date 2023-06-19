@@ -14,9 +14,9 @@ internal class Program
         {
 
 
-            UICode.Title();
+            EmployeeManager.Title();
         MenuCommand:
-            UICode.MenuForLogin();
+            EmployeeManager.MenuForLogin();
             try
             {
                 int optionForLogin = int.Parse(Console.ReadLine());
@@ -28,7 +28,7 @@ internal class Program
                             do
                             {
                                 Console.ForegroundColor = ConsoleColor.Cyan;
-                                Console.WriteLine("Company-Login-----------");
+                                Console.WriteLine("Company Login");
                                 Console.ForegroundColor = ConsoleColor.White;
                                 Console.Write("Enter Username of Company: ");
                                 string EnterUserName = Console.ReadLine();  
@@ -40,7 +40,7 @@ internal class Program
                                     Console.ForegroundColor = ConsoleColor.Green;
                                     Console.WriteLine("Login Successfully");
                                     Console.ForegroundColor = ConsoleColor.White;
-                                    UICode.MenuForCompany();
+                                    EmployeeManager.MenuForCompany();
                                     do
                                     {
                                         int optionForMenuCompany = int.Parse(Console.ReadLine());
@@ -50,8 +50,8 @@ internal class Program
 
                                                 // Add Employee
                                                 company.AddInformationEmployee();
-                                                UICode.AddSuccessful();
-                                                UICode.MenuForCompany();
+                                                EmployeeManager.AddSuccessful();
+                                                EmployeeManager.MenuForCompany();
                                                 break;
 
                                             case 2:
@@ -64,14 +64,14 @@ internal class Program
 
                                                     // Enter Employee ID
                                                     Employee newEmployee = new Employee();
-                                                    newEmployee.ID = UICode.EnterEmployeeID();
+                                                    newEmployee.ID = EmployeeManager.EnterEmployeeID();
 
                                                     while (!company.SearchEmployeeID(newEmployee.ID))
                                                     {
                                                         Console.ForegroundColor = ConsoleColor.Red;
                                                         Console.WriteLine("Employee ID not Exist. Please Enter Employee ID again");
                                                         Console.ForegroundColor = ConsoleColor.White;
-                                                        newEmployee.ID = UICode.EnterEmployeeID();
+                                                        newEmployee.ID = EmployeeManager.EnterEmployeeID();
                                                     }
 
                                                     Employee employeeObj = company.SearchEmployeeObj(newEmployee.ID);
@@ -83,13 +83,13 @@ internal class Program
                                                     string namePro = Console.ReadLine();
                                                     Console.WriteLine("Enter details of project: ");
                                                     string details  = Console.ReadLine();
-                                                    Project newPoint = new Project(projectID, employeeObj, namePro, details);
+                                                    Project newProject = new Project(projectID, employeeObj, namePro, details);
 
 
-                                                    // Add new point to point list in employee
-                                                    company.Projects.Add(newPoint);
-                                                    UICode.AddSuccessful();
-                                                    UICode.MenuForCompany();
+                                                    // Add new project to project list in employee
+                                                    company.Projects.Add(newProject);
+                                                    EmployeeManager.AddSuccessful();
+                                                    EmployeeManager.MenuForCompany();
 
                                                 }
                                                 catch (FormatException ex)
@@ -105,40 +105,40 @@ internal class Program
                                             case 3:
                                                 // View Employee
                                                 company.PrintInformationOfEmployee();
-                                                UICode.MenuForCompany();
+                                                EmployeeManager.MenuForCompany();
                                                 break;
 
 
                                             case 4:
                                                 // View Project
                                                 company.PrintInformationOfProject();
-                                                UICode.MenuForCompany();
+                                                EmployeeManager.MenuForCompany();
                                                 break;
 
                                             case 5:
                                                 //Update Employee
                                                 try
                                                 {
-                                                    int idEmployeeToUpdate = UICode.EnterEmployeeID();
+                                                    int idEmployeeToUpdate = EmployeeManager.EnterEmployeeID();
 
                                                     while (!company.SearchEmployeeID(idEmployeeToUpdate))
                                                     {
                                                         Console.ForegroundColor = ConsoleColor.Red;
-                                                        UICode.UpdateFail();
+                                                        EmployeeManager.UpdateFail();
                                                         Console.ForegroundColor = ConsoleColor.White;
-                                                        idEmployeeToUpdate = UICode.EnterEmployeeID();
+                                                        idEmployeeToUpdate = EmployeeManager.EnterEmployeeID();
                                                     }
 
-                                                    string NewName = UICode.EnterEmployeeName();
-                                                    int NewAge = UICode.EnterEmployeeAge();
-                                                    string NewAddress = UICode.EnterEmployeeAdress();
-                                                    int NewPhone = UICode.EnterEmployeePhoneNumber();
+                                                    string NewName = EmployeeManager.EnterEmployeeName();
+                                                    int NewAge = EmployeeManager.EnterEmployeeAge();
+                                                    string NewAddress = EmployeeManager.EnterEmployeeAdress();
+                                                    int NewPhone = EmployeeManager.EnterEmployeePhoneNumber();
 
                                                     company.UpdateEmployeeByID(idEmployeeToUpdate, NewName, NewAge, NewAddress, NewPhone);
                                                     Console.ForegroundColor = ConsoleColor.Green;
-                                                    UICode.UpdateSuccessful();
+                                                    EmployeeManager.UpdateSuccessful();
                                                     Console.ForegroundColor = ConsoleColor.White;
-                                                    UICode.MenuForEmployee();
+                                                    EmployeeManager.MenuForEmployee();
                                                 }
                                                 catch (FormatException ex)
                                                 {
@@ -155,24 +155,24 @@ internal class Program
                                                 // Update Project
                                                 try
                                                 {
-                                                    int idProjectToUpdate = UICode.EnterProjectID();
+                                                    int idProjectToUpdate = EmployeeManager.EnterProjectID();
                                                     while (!company.SearchProjectID(idProjectToUpdate))
                                                     {
                                                         Console.ForegroundColor = ConsoleColor.Red;
-                                                        UICode.UpdateFail();
+                                                        EmployeeManager.UpdateFail();
                                                         Console.ForegroundColor = ConsoleColor.White;
-                                                        idProjectToUpdate = UICode.EnterProjectID();
+                                                        idProjectToUpdate = EmployeeManager.EnterProjectID();
                                                     }
                                                     
-                                                    string NewNamePro = UICode.EnterNameProject();
+                                                    string NewNamePro = EmployeeManager.EnterNameProject();
 
-                                                    string NewDetails = UICode.EnterDetailProject();
+                                                    string NewDetails = EmployeeManager.EnterDetailProject();
                                                     
                                                     company.UpdateProjectByID(idProjectToUpdate,  NewNamePro, NewDetails);
                                                     Console.ForegroundColor = ConsoleColor.Green;
-                                                    UICode.UpdateSuccessful();
+                                                    EmployeeManager.UpdateSuccessful();
                                                     Console.ForegroundColor = ConsoleColor.White;
-                                                    UICode.MenuForCompany();
+                                                    EmployeeManager.MenuForCompany();
                                                 }
                                                 catch (FormatException ex)
                                                 {
@@ -187,20 +187,20 @@ internal class Program
                                                 // Delete Employee
                                                 try
                                                 {
-                                                    int idToDelete = UICode.EnterEmployeeID();
+                                                    int idToDelete = EmployeeManager.EnterEmployeeID();
                                                     while (!company.SearchEmployeeID(idToDelete))
                                                     {
                                                         Console.ForegroundColor = ConsoleColor.Red;
-                                                        UICode.DeleteFail();
+                                                        EmployeeManager.DeleteFail();
                                                         Console.ForegroundColor = ConsoleColor.White;
-                                                        idToDelete = UICode.EnterEmployeeID();
+                                                        idToDelete = EmployeeManager.EnterEmployeeID();
                                                     }
-                                                    company.SearchEmployeeID(idToDelete);
-                                                    company.DeleteProjectByID(idToDelete);
+                                                    company.DeleteEmployeeByID(idToDelete);
+                                                    
                                                     Console.ForegroundColor = ConsoleColor.Green;
-                                                    UICode.DeleteSuccessful();
+                                                    EmployeeManager.DeleteSuccessful();
                                                     Console.ForegroundColor = ConsoleColor.White;
-                                                    UICode.MenuForCompany();
+                                                    EmployeeManager.MenuForCompany();
                                                 }
                                                 catch (FormatException ex)
                                                 {
@@ -212,22 +212,22 @@ internal class Program
                                                 }
                                                 break;
                                             case 8:
-                                                // Delete Point
+                                                // Delete Project
                                                 try
                                                 {
-                                                    int idToDelete = UICode.EnterProjectID();
+                                                    int idToDelete = EmployeeManager.EnterProjectID();
                                                     while (!company.SearchProjectID(idToDelete))
                                                     {
                                                         Console.ForegroundColor = ConsoleColor.Red;
-                                                        UICode.DeleteFail();
+                                                        EmployeeManager.DeleteFail();
                                                         Console.ForegroundColor = ConsoleColor.White;
-                                                        idToDelete = UICode.EnterProjectID();
+                                                        idToDelete = EmployeeManager.EnterProjectID();
                                                     }
                                                     company.DeleteProjectByID(idToDelete);
                                                     Console.ForegroundColor = ConsoleColor.Green;
-                                                    UICode.DeleteSuccessful();
+                                                    EmployeeManager.DeleteSuccessful();
                                                     Console.ForegroundColor = ConsoleColor.White;
-                                                    UICode.MenuForCompany();
+                                                    EmployeeManager.MenuForCompany();
                                                 }
                                                 catch (FormatException ex)
                                                 {
@@ -242,20 +242,14 @@ internal class Program
                                                 //Search Employee
                                                 try
                                                 {
-                                                    int enterID = UICode.EnterEmployeeID();
-                                                    while (!company.SearchEmployeeID(enterID))
-                                                    {
-                                                        Console.ForegroundColor = ConsoleColor.Red;
-                                                        UICode.SearchFail();
-                                                        Console.ForegroundColor = ConsoleColor.White;
-                                                        enterID = UICode.EnterProjectID();
-                                                    }
+                                                    int enterID = EmployeeManager.EnterEmployeeID();
+                                                   
                                                     var employeeInListBorrow = company.GetEmployeeByID(enterID);
                                                     Console.WriteLine(employeeInListBorrow.ToString());
                                                     Console.ForegroundColor = ConsoleColor.Green;
-                                                    UICode.SearchSuccessful();
+                                                    EmployeeManager.SearchSuccessful();
                                                     Console.ForegroundColor = ConsoleColor.White;
-                                                    UICode.MenuForEmployee();
+                                                    EmployeeManager.MenuForEmployee();
                                                 }
                                                 catch (FormatException ex)
                                                 {
@@ -271,20 +265,14 @@ internal class Program
                                                 //Search Project
                                                 try
                                                 {
-                                                    int enterprojectID = UICode.EnterEmployeeID();
-                                                    while (!company.SearchEmployeeID(enterprojectID))
-                                                    {
-                                                        Console.ForegroundColor = ConsoleColor.Blue;
-                                                        UICode.SearchFail();
-                                                        Console.ForegroundColor = ConsoleColor.White;
-                                                        enterprojectID = UICode.EnterProjectID();
-                                                    }
-                                                    var pointInListBorrow = company.GetProjectByID(enterprojectID);
-                                                    Console.WriteLine(pointInListBorrow.ToString());
+                                                    int enterprojectID = EmployeeManager.EnterEmployeeID();
+                                                    
+                                                    var projectInListBorrow = company.GetProjectByID(enterprojectID);
+                                                    Console.WriteLine(projectInListBorrow.ToString());
                                                     Console.ForegroundColor = ConsoleColor.Green;
-                                                    UICode.SearchSuccessful();
+                                                    EmployeeManager.SearchSuccessful();
                                                     Console.ForegroundColor = ConsoleColor.White;
-                                                    UICode.MenuForCompany();
+                                                    EmployeeManager.MenuForCompany();
                                                 }
                                                 catch (FormatException ex)
                                                 {
@@ -305,9 +293,9 @@ internal class Program
                                 {
                                     Console.WriteLine();
                                     Console.ForegroundColor = ConsoleColor.Red;
-                                    Console.WriteLine("Login Fail");
+                                    Console.WriteLine("Login Fail\n Please Login again...");
                                     Console.ForegroundColor = ConsoleColor.White;
-                                    UICode.MenuForLogin();
+                                    EmployeeManager.MenuForLogin();
                                 }
                             }
                             while (optionForLogin != 3);
@@ -316,20 +304,20 @@ internal class Program
                             do
                             {
                                 Console.ForegroundColor = ConsoleColor.Cyan;
-                                Console.WriteLine("Employee-Login...");
+                                Console.WriteLine("Employee Login");
                                 Console.ForegroundColor = ConsoleColor.White;
                                 Console.Write("Enter Username of Employee: ");
                                 string EnterUserName = Console.ReadLine();
                                 Console.Write("Enter Password of Employee: ");
                                 string EnterPassword = Console.ReadLine();
-                                company.Login(EnterUserName, EnterPassword);
-                                if (company.Login(EnterUserName, EnterPassword))
+                                employee.Login(EnterUserName, EnterPassword);
+                                if (employee.Login(EnterUserName, EnterPassword))
                                 {
                                     Console.WriteLine();
                                     Console.ForegroundColor = ConsoleColor.Green;
                                     Console.WriteLine("Login Successfully");
                                     Console.ForegroundColor = ConsoleColor.White;
-                                    UICode.MenuForCompany();
+                                    EmployeeManager.MenuForEmployee();
                                     do
                                     {
                                         int optionForMenuEmployee = int.Parse(Console.ReadLine());
@@ -338,32 +326,32 @@ internal class Program
                                             case 1:
                                                 //View Employee
                                                 company.PrintInformationOfEmployee();
-                                                UICode.MenuForEmployee();
+                                                EmployeeManager.MenuForEmployee();
                                                 break;
 
                                             case 2:
                                                 // View Project
                                                 company.PrintInformationOfProject();
-                                                UICode.MenuForEmployee();
+                                                EmployeeManager.MenuForEmployee();
                                                 break;
                                             case 3:
                                                 //Search Employee
                                                 try
                                                 {
-                                                    int enterID = UICode.EnterEmployeeID();
+                                                    int enterID = EmployeeManager.EnterEmployeeID();
                                                     while (!company.SearchEmployeeID(enterID))
                                                     {
                                                         Console.ForegroundColor = ConsoleColor.Red;
-                                                        UICode.SearchFail();
+                                                        EmployeeManager.SearchFail();
                                                         Console.ForegroundColor = ConsoleColor.White;
-                                                        enterID = UICode.EnterProjectID();
+                                                        enterID = EmployeeManager.EnterProjectID();
                                                     }
                                                     var employeeInListBorrow = company.GetEmployeeByID(enterID);
                                                     Console.WriteLine(employeeInListBorrow.ToString());
                                                     Console.ForegroundColor = ConsoleColor.Green;
-                                                    UICode.SearchSuccessful();
+                                                    EmployeeManager.SearchSuccessful();
                                                     Console.ForegroundColor = ConsoleColor.White;
-                                                    UICode.MenuForEmployee();
+                                                    EmployeeManager.MenuForEmployee();
                                                 }
                                                 catch (FormatException ex)
                                                 {
@@ -375,23 +363,23 @@ internal class Program
                                                 }
                                                 break;
                                             case 4:
-                                                //Search Point
+                                                //Search project
                                                 try
                                                 {
-                                                    int enterpointID = UICode.EnterEmployeeID();
-                                                    while (!company.SearchEmployeeID(enterpointID))
+                                                    int enterprojectID = EmployeeManager.EnterEmployeeID();
+                                                    while (!company.SearchEmployeeID(enterprojectID))
                                                     {
                                                         Console.ForegroundColor = ConsoleColor.Red;
-                                                        UICode.SearchFail();
+                                                        EmployeeManager.SearchFail();
                                                         Console.ForegroundColor = ConsoleColor.White;
-                                                        enterpointID = UICode.EnterProjectID();
+                                                        enterprojectID = EmployeeManager.EnterProjectID();
                                                     }
-                                                    var pointInListBorrow = company.GetProjectByID(enterpointID);
-                                                    Console.WriteLine(pointInListBorrow.ToString());
+                                                    var projectInListBorrow = company.GetProjectByID(enterprojectID);
+                                                    Console.WriteLine(projectInListBorrow.ToString());
                                                     Console.ForegroundColor = ConsoleColor.Green;
-                                                    UICode.SearchSuccessful();
+                                                    EmployeeManager.SearchSuccessful();
                                                     Console.ForegroundColor = ConsoleColor.White;
-                                                    UICode.MenuForEmployee();
+                                                    EmployeeManager.MenuForEmployee();
                                                 }
                                                 catch (FormatException ex)
                                                 {
@@ -412,9 +400,9 @@ internal class Program
                                 {
                                     Console.WriteLine();
                                     Console.ForegroundColor = ConsoleColor.Red;
-                                    Console.WriteLine("Login Fail");
+                                    Console.WriteLine("Login Fail\nPlease try again");
                                     Console.ForegroundColor = ConsoleColor.White;
-                                    UICode.MenuForLogin();
+                                    EmployeeManager.MenuForLogin();
                                 }
                             }
                             while (optionForLogin != 3);
